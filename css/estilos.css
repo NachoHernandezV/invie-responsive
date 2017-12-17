@@ -1,0 +1,123 @@
+body{
+	margin:0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+header{
+	background:#1C3643;
+	height: 50px;
+	padding-left: 10px;/*margena la izquierda*/
+	display: flex;/*para alinearel logo conel nav*/
+	justify-content: space-between;
+	align-items: center;/*centrar a los hijos*/
+}
+.header-right{
+	display: flex;
+}
+.button{
+	/*background: gray;*/
+	border-bottom: 2px solid black;
+	font-size: 14px;
+	padding: 7px;
+	border-radius: 2px;
+	margin: 10px;
+	color:white;
+	align-items: center;
+	text-decoration: none;
+	transition: .2s;
+}
+.button:active{
+	transform: scale(.9);
+}
+.red{
+	background: #FF514D;
+}
+nav{
+	display: flex;
+}
+nav ul{
+	display: flex;/*Para alinear los elementos de menu*/
+}
+nav li{
+	list-style: none;/*que no tenga ningun estilo*/
+	border-right: 1px solid white;/*para poner borde*/
+	padding: 0px 20px;
+	border-top: 2px solid transparent;/*es para que al crear un border con el hover no semodifique el texto hacia abajo*/
+}
+nav li:hover{
+		/*box-shadow: 0px 2px 5px #999; tambien sepuede hacer con la sombra*/
+		border-top: 2px solid red;
+}
+nav a.is-active{
+	border-top: 2px solid green;
+}
+nav a{
+	color:white;
+	text-decoration: none;
+	align-items: center;
+}
+
+.portada{
+	/*border:1px solid red;*/
+	position: relative; /*para que sea la referencia de description,, si no se pone seria el navegador*/
+	/*para que sepocisione segun la imagen*/
+}
+h1{
+	margin: 0;
+}
+.portada .description { /*Herencia de CSS para accedera .description*/
+	background: rgba(255,255,255,0.1); /*eselblanco, y el 0.5es la trasnparencia*/
+	position: absolute;
+	bottom: 50px;
+	left:20px;
+	padding: 50px;
+}
+
+.blog{
+	width: 1000px;
+	margin: 0 auto;/*para centrar*/
+}
+
+.blog-items{
+	display: flex; /*Para poner nuetros elementosen linea*/
+	flex-wrap: wrap; /*si el elemnto ya no tiene especio se pone abajo */
+	/*justify-content: space-around;mismo margenatodos los elemntos de izqy derecha,abajo y arriba*/
+	justify-content: space-between;
+}
+.item-blog{
+	width: 300px;/*para darle el ancho a la caja tanto imagen como textode abajo*/
+}
+.blog-items h3{
+	font-weight: 600;
+	margin: 10px 0;
+}
+
+.paginador{
+	display: flex;
+	justify-content: center;/*centrar el contenido horizontal*/
+	align-items: center; /*centar a los hijos del contenidode manera vertical*/
+	padding: 20px 0;
+}
+.paginador ul{
+	display: flex;
+	list-style: none;/*esto es para quitar la decoracion en */
+	margin:0;/*para poder alinear el span con los li*/
+	padding: 0;
+	padding-left: 15px;
+}
+.paginador li{
+	background: gray;
+	height: 40px;/*alto del cuadro*/
+	line-height: 40px; /*para centrar en al linea vertical*/
+	padding: 0 15px;
+	border:1px solid gray;
+	margin:0 5px;
+}
+.paginador li.selected{
+border-color: transparent;
+background: white;
+}
+.paginador a{
+	text-decoration: none;
+	color:black;
+}
